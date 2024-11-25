@@ -8,7 +8,7 @@ const luckyCatPickerVisible = computed(() => store.luckyCatPickerVisible);
 
 function handleClick(index: number) {
   store.setLuckyCat(index);
-  store.addChance(10);
+  store.addChance(10 + Math.floor(Math.random() * 10));
   store.hideLuckyCatPicker();
 }
 </script>
